@@ -4,7 +4,7 @@ There's been a Murder in SQL City! The SQL Murder Mystery is designed to be both
 
 To have a go visit https://mystery.knightlab.com/  
 
-How I approached the challenge:
+__<ins>How I approached the challenge:</ins>__ <br />
 Started out by reading the challenge info, going through the available tables and inspecting the schema as below. I use Exclaidraw to gather pictures or text as it can help to have all in one place and make notes.
 ![image](https://github.com/user-attachments/assets/f01dfffa-887c-41bd-ab5e-7750fbf7e5db)
 
@@ -99,5 +99,5 @@ WHERE
     AND fb.event_name = "SQL Symphony Concert"
 ```
 
-__<ins>What I learnt</ins>__ <br />
+__<ins>What I learnt:</ins>__ <br />
 This is the 2nd time I've completed the SQL Murder Mystery, however the first time was in my first days of properly learning SQL and I only used separate queries. This time round I've learnt you can use multiple joins, I've limited my select statements to fields I need, rather than all, and I've used aliases. This is also my debut repository and I look forward to many more! 
