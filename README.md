@@ -5,6 +5,9 @@ There's been a Murder in SQL City! The SQL Murder Mystery is designed to be both
 To have a go visit https://mystery.knightlab.com/  
 
 How I approached the challenge:
+Started out by reading the challenge info, going through the available tables and inspecting the schema as below. I use Exclaidraw to gather pictures or text as it can help to have all in one place and make notes.
+![image](https://github.com/user-attachments/assets/f01dfffa-887c-41bd-ab5e-7750fbf7e5db)
+
 * STEP 1 - Start by retrieving the corresponding crime scene report 
 from the police department’s database. We know the crime was a ​murder​ that occurred 
 sometime on ​Jan.15, 2018​ and that it took place in ​SQL City
@@ -80,20 +83,21 @@ WHERE person_id = "67318"
 * Step 6 - Find the mastermind. Based on the murderer's transcript, he was hired by a woman with red hair
 and around 65" or 67" who drives a Tesla Model S. She attended a SQL Symphony Concernt 3 times in Dec 2017
 ```
-SELECT distinct name,
-p.id
-,license_id
-FROM person as p
-    INNER JOIN drivers_license as dl
-    ON p.license_id=dl.id
-    INNER JOIN facebook_event_checkin as fb
-    ON p.id=fb.person_id
+SELECT 
+  distinct name, 
+  p.id, 
+  license_id 
+FROM 
+  person as p 
+  INNER JOIN drivers_license as dl ON p.license_id = dl.id 
+  INNER JOIN facebook_event_checkin as fb ON p.id = fb.person_id 
 WHERE 
-    hair_color = 'red'
-    AND gender = "female"
-    AND height in (65,66,67)
-    AND car_model like "Model S"
+  hair_color = 'red' 
+    AND gender = "female" 
+    AND height in (65, 66, 67) 
+    AND car_model like "Model S" 
     AND fb.event_name = "SQL Symphony Concert"
+```
 
-
-
+__<ins>What I learnt</ins>__ <br />
+This is the 2nd time I've completed the SQL Murder Mystery, however the first time was in my first days of properly learning SQL and I only used separate queries. This time round I've learnt you can use multiple joins, I've limited my select statements to fields I need, rather than all, and I've used aliases. This is also my debut repository and I look forward to many more! 
